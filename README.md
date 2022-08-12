@@ -1,2 +1,2 @@
-# Curso de desenvolvimento de sistemas
-Esse repositório foi criando durante meu curso de desenvolvimento de sistemas.
+# Senai Desenvolvedor
+Repositorio criado para colocar os minis programas criado durante o curso.
