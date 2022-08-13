@@ -44,6 +44,10 @@ CREATE TABLE CONSULTA(
 	id_medico INT
 	
 );
+CREATE TABLE especialidade(
+	idEspecialidade INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(45) NOT NULL
+);
 
 /*COLOCANDO AS CHAVES ESTRANGEIRAS*/
 ALTER TABLE consulta ADD FOREIGN KEY(id_medico)
@@ -70,4 +74,8 @@ INSERT INTO paciente VALUES(NULL,"ROBSON PAIVA","321.456.789.11","(85) 9 9090-41
 INSERT INTO consulta VALUES(NULL,25-12-2020,"PACIENTE COM DOR DE CABEÇA",1,2),
 (NULL,25-12-2020,"PACIENTE COM DOR DE CABEÇA",2,1);
 
-ALTER TABLE medicos DROP COLUMN especialidade;
+/*ESPECIALIDADE*/
+INSERT INTO especialidade(nome) VALUES('Pediatria');
+INSERT INTO especialidade(nome) VALUES('Clinico Geral');
+
+DELETE FROM especialidade WHERE idEspecialidade =2; 
