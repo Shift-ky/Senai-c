@@ -8,7 +8,6 @@ var
     n1,n2, media:real 
 inicio
    
-
   enquanto i < 3 faca
     escreva("Digite o nome do aluno: ")
     leia(nome)
