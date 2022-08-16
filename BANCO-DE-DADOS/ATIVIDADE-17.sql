@@ -68,12 +68,12 @@ SELECT DataNasci, primeiroNome FROM FUNCIONARIOS ORDER BY DataNasci ASC;
 SELECT SUM(SALARIO) FROM Funcionarios;
 
 /*6. Liste a quantidade de funcionários desta empresa.*/
-SELECT COUNT(*) from Funcionarios;
+SELECT COUNT(*) FROM Funcionarios;
 
 /*7. Liste o salário médio pago pela empresa.*/
 SELECT AVG(SALARIO) FROM Funcionarios;
 
 /*8. Liste os nomes dos funcionários que moram em Recife e que exerçam a função de Telefonista.*/
 SELECT primeiroNome FROM Funcionarios
-WHERE CIDADE ="fortaleza"
+WHERE CIDADE ="RECIFE"
 AND FUNCAO = "TELEFONISTA";
