@@ -1,5 +1,24 @@
+/*Um petshop especializado apenas em cães deseja informatizar seus
+serviços. Inicialmente é preciso armazenar os dados dos clientes, os
+dados dos veterinários, as informações sobre as consultas e os dados
+dos animais. Dos clientes é importante armazenar o nome, o cpf e o
+telefone. Já dos veterinários é importante armazenar o código do seu
+registro que é o CRMV, o seu nome, a data de admissão e o salário. De
+cada animal é importante guardar o nome, o ano de nascimento e a
+raça. Veterinários realizam consultas aos animais e é importante saber o
+dia da consulta, a hora da consulta e o motivo, pois é interessante
+sempre conseguir obter uma listagem para cada veterinário dos animais
+que ele consultou. Por fim, é importante saber qual é o dono de cada
+cãozinho, considerando que há alguns clientes que além de compras,
+levam os animais para as consultas.*/
+
+/*CRIANDO O BANCO DE DADOS*/
 CREATE DATABASE petshop;
+
+/*CONECTANDO NO BANCO DE DADOS*/
 USE PETSHOP;
+
+/*CRIANDO AS TABELAS*/
 CREATE TABLE veterinario(
 	idVeterinario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	nome varchar(50) not null,
@@ -42,6 +61,7 @@ CREATE TABLE animal(
 	);
 
 
+/*COLOCANDO OS RELACIONAMENTOS DAS TABELAS*/
 ALTER TABLE consulta ADD FOREIGN KEY (animalID) 
 REFERENCES animal(idAnimal);
 
