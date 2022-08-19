@@ -14,3 +14,37 @@ De R$ 2.203,49 até R$ 3.305,22
 
 De R$ 3.305,23 até R$ 6.433,57
 14%*/
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+    
+    setlocale(LC_ALL,"Portuguese")
+    float valorHora, horaTra, inss, inssDes,salLi,ali,sBruto;
+
+    printf("Informe o valor da Hora Aula: ");
+    scanf(" %f",&valorHora);
+
+    printf("Informe quantas horas trabalhadas esse mês:" );
+    scanf(" %f",&horaTra);
+
+    printf("Qual o Percentual do INSS: ");
+    scanf("%f",&inss);
+
+    sBruto = valorHora * horaTra;
+
+    inssDes = (sBruto*inss)/100;
+
+    salLi = sBruto - inssDes;
+
+    if(sBruto <= 1.100){
+        ali = (sBruto * 7.5)/100;
+    }else if(sBruto > 1100 && sBruto < 2203.43){
+        ali = sBruto*9 /100;
+    } else if(sBruto > 2203,49 && sBruto < 3305.22){
+        ali =  sBruto * 12 /100;
+    } else if(sBruto > 3305.23 < 6433.57){
+        ali = sBruto* 14 /100;
+    }
+    printf("O salário líquido é: R$ %.2f ",salLi - ali);
+}
