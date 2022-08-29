@@ -9,3 +9,32 @@ com o índice e a tabela a seguir:
 0,4            1º e 2º grupos 
 0,5            1º, 2º e 3º grupos  
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    float indice;
+
+    printf("==================================\n");
+    printf("===== FISCALIZAÇÃO AMBIENTAL =====\n");
+    printf("==================================\n");
+
+    printf("Digite o índice de pluição: ");
+    scanf("%f",&indice);
+
+    if(indice > 0.5){
+        printf("SUSPENDER AS ATIVIDADES INDUSTRIAIS DO 1º 2º E DO 3º GRUPO");
+    } else if(indice >= 4){
+        printf("SUSPENDER AS ATIVIDADES INDUSTRIAIS DO 1º E 2º GRUPO");
+    } else if(indice >= 0.3){
+        printf("SUSPENDER AS ATIVIDADES INDUSTRIAIS DO 1º GRUPO");
+    } else {
+        printf("ATIVIDADES INDUSTRIAIS PODEM FUNCIONAR NORMALMENTE");
+    }
+}
+
