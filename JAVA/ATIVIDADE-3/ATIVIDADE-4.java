@@ -8,30 +8,36 @@ Código               Descrição
 
 import java.util.Scanner;
 
-public class atividade3{
-    public static void main(string[] args){
-
-        String nome;
-        int idade;
+public class atividade4{
+    public static void main(String[] args){
+        int opc = 1;
 
         Scanner entrada = new Scanner(System.in);
+        
+        while(opc != 0){
 
-        System.out.prinln("Digite o seu nome: ");
-        nome = entrada.nextLine();
+            System.out.print("Digite um valor de 1 a 4 ou 0 para sair: ->");
+            opc = entrada.nextInt();
 
-        System.out.print("Digite a sua idade: ");
-        idade = entrada.nextInt();
-
-        if(idade < 10){
-            System.out.println("O plano ideal para o SR(A) %s \nsera de 30 reais ao mes",nome);
-        } else if(idade < 45){
-            System.out.println("O plano ideal para o SR(A) %s \nsera de 45 reais ao mes",nome);
-        }else if(idade < 59){
-            System.out.println("O plano ideal para o SR(A) %s \nsera de 150 reais ao mes",nome);
-        }else if(idade < 65){
-            System.out.println("O plano ideal para o SR(A) %s \nsera de 250 reais ao mes",nome);
-        }else{
-            System.out.println("O plano ideal para o SR(A) %s \nsera de 400 reais ao mes",nome);
+            switch (opc) {
+                case 0:
+                    break;
+                case 1:
+                    System.out.print("Alimento não perecível");
+                    break;
+                case 2:
+                    System.out.print("Alimento perecível");
+                    break;
+                case 3:
+                    System.out.print("Vestuario");
+                    break;
+                case 4;
+                    System.out.print("Limpeza");
+        
+                default:
+                System.out.print("Opção inválida");
+                    break;
+            }
         }
         entrada.close();
     }
