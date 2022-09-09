@@ -71,7 +71,7 @@ public static void main(String[] args) {
 		System.out.println("\nSOMA DIAGONAIS\n");
 		for (int i = 0; i < matB.length; i++) {
 			for (int j = 0; j < matB.length; j++) {
-				if(i ==j) {
+				if(i ==j || i + j == 4) {
 					System.out.printf("[%3d]",matA[i][j]+matB[i][j]);
 				} else {
 					System.out.printf("[  0]");
