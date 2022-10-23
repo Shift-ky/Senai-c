@@ -1,5 +1,5 @@
-# Repository develpment corse
-This repositorys contains all activids for my course of programing.
+# Repository of systems development course
+This repository contains all the activities of my programming course.
 ## Technology
 * Java 
 * C
